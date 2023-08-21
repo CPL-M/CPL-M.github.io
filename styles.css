@@ -1,7 +1,48 @@
+.page {
+  background-color: #C4CACA;
+  padding-top: 0px;
+  border
+}
+.Navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  max-width: 840px;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 20px;
+}
+.Header-Items {
+  float: center;
+  display: block;
+  padding: 10px 2px;
+  background-color: #775385;
+  text-align: center;
+  text-decoration: none;
+}
+.Nav-Items {
+  float: left;
+  display: block;
+  padding: 10px 84.25px;
+  background-color: #796074;
+  text-align: center;
+  text-decoration: none;
+}
+.Nav-Items:hover {
+  background-color: #D4CACD;
+  color: black;
+}
+.Header-Items:hover {
+  background-color: #D4CACD;
+  color: black;
+}
 .container {
   max-width: 840px;
   margin: 0 auto;
   text-align: center;
+  background-color: #796074;
+  border-radius: 20px;
 }
 .name {
   font-family: "Audiowide", serif;
