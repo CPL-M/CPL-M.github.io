@@ -1,6 +1,57 @@
 .container {
+  max-width: 840px;
   margin: 0 auto;
+  text-align: center;
+}
+.name {
+  font-family: "Audiowide", serif;
+  font-size: 4em;
+}
+.Unturned-name, .links-name {
+    font-family: "Audiowide", serif;
+  font-size: 3em;
+}
+.intro, .Github {
+  font-family: "Trirong", serif;
+  font-weight: bold;
+}
+.Hobbies {
+  list-style: none;
+  line-height: .2em;
+}
+.Github {
+  font-size: 1.5em;
+}
+.what-i-make, .what-i-have-made, .the-links {
+  list-style: none;
+  line-height: 1.5em;
+  font-weight: bold;
+  font-family: "Trirong", serif;
+}
+.Unturned-grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
 }
 .projects {
-  
+  width: auto;
+  padding: 15px;
+  border: 3px;
+  max-width: 100%
+}
+
+.projects {
+  border-radius: 50px;
+}
+.pfp {
+   border-radius: 50px;
+    width: auto;
+    padding: 15px;
+    border: 3px;
+    max-width: 100%
+}
+
+@media (max-width 480px) {
+  .projects {
+    max-width: 400px;
+  }
 }
