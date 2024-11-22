@@ -20,10 +20,12 @@ body {
 
 /* Header Section */
 header {
-    background: #7b6983;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: white;
-    padding: 20px 0;
     text-align: center;
+    padding: 100px 0;
 }
 
 .navbar {
@@ -113,4 +115,12 @@ footer {
     color: white;
     padding: 20px 0;
     text-align: center;
+}
+
+.project-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover; /* Ensures the image is cropped proportionally to fit */
+    border-radius: 5px;
+    margin-bottom: 10px;
 }
