@@ -1,0 +1,35 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    padding: 50px 0;
+    background: #003366;
+    color: white;
+}
+
+header h1 {
+    margin: 0;
+}
+
+section {
+    padding: 20px;
+}
+
+#featured-projects .project {
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #f4f4f4;
+}
