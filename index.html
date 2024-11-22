@@ -8,26 +8,53 @@
 </head>
 <body>
     <header id="home">
-        <nav>
-            <ul>
+        <nav class="navbar">
+            <div class="logo">[Your Name]</div>
+            <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
         <div class="hero">
-            <h1>Hi, I'm [Your Name]</h1>
+            <h1>Hi, I'm <span>[Your Name]</span></h1>
             <p>Building Innovative Solutions with Code</p>
             <a href="projects.html" class="cta-button">Explore My Work</a>
         </div>
     </header>
 
     <section id="about">
-        <h2>About Me</h2>
-        <p>I’m a software engineer passionate about creating impactful applications. My expertise lies in web development, machine learning, and system design.</p>
+        <div class="container">
+            <h2>About Me</h2>
+            <p>I’m a software engineer passionate about creating impactful applications. My expertise lies in web development, machine learning, and system design.</p>
+        </div>
     </section>
 
     <section id="featured-projects">
-        <h2>Featured Projects</h2>
-        <div class="project">
-            <h3>Project One</
+        <div class="container">
+            <h2>Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Project One</h3>
+                    <p>A brief description of the project.</p>
+                    <a href="#" class="project-link">View Project</a>
+                </div>
+                <div class="project-card">
+                    <h3>Project Two</h3>
+                    <p>A brief description of the project.</p>
+                    <a href="#" class="project-link">View Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>Email: yourname@example.com</p>
+            <p>LinkedIn: <a href="#">Your LinkedIn</a></p>
+            <p>GitHub: <a href="#">Your GitHub</a></p>
+        </div>
+    </footer>
+</body>
+</html>
