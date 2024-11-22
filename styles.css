@@ -17,7 +17,14 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    height: 100vh; /* Ensure it occupies visible space */
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
+
 
 
 .container {
@@ -126,11 +133,9 @@ footer {
 }
 
 .project-card img {
-    width: 100%; /* Scale to fit the width of the container */
-    height: auto; /* Maintain the original aspect ratio */
-    border-radius: 5px; /* Optional: Add rounded corners for a polished look */
-    object-fit: contain; /* Scale the image to fit without cropping */
-    background-color: #f8f8f8; /* Optional: Add a background color to fill gaps if needed */
+    width: 100%;
+    height: 150px;
+    object-fit: cover; /* Ensures the image is cropped proportionally to fit */
+    border-radius: 5px;
+    margin-bottom: 10px;
 }
-
-
