@@ -17,7 +17,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 100vh; /* Ensure it occupies visible space */
+    height: 500px; /* Ensure it occupies visible space */
     color: white;
     text-align: center;
     display: flex;
@@ -132,7 +132,7 @@ footer {
 
 .project-card img {
     width: 100%;
-    height: 150px;
+    height: 100%;
     object-fit: cover; /* Ensures the image is cropped proportionally to fit */
     border-radius: 5px;
     margin-bottom: 10px;
