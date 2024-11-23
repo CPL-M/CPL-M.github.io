@@ -10,6 +10,13 @@ body {
     line-height: 1.6;
     color: #333;
     background-color: #f8f9fa;
+    margin: 0; /* Remove default body margin */
+    padding-top: 0px; /* Adjust based on the navbar height */
+}
+
+#featured-projects {
+    padding-bottom: 50px; /* Adds padding below the projects section */
+    
 }
 
 #home {
@@ -17,7 +24,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 500px; /* Ensure it occupies visible space */
+    height: 600px; /* Ensure it occupies visible space */
     color: white;
     text-align: center;
     display: flex;
@@ -46,7 +53,16 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
+    position: fixed; /* Fixes the navbar at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.7); /* Optional: background with some transparency */
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: adds a shadow for visibility */
 }
+
 
 .nav-links {
     list-style: none;
@@ -54,11 +70,11 @@ header {
     gap: 15px;
 }
 
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
+    .nav-links a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
 
 .hero {
     text-align: center;
@@ -66,9 +82,9 @@ header {
     padding: 20px;
 }
 
-.hero h1 span {
-    color: #ffd700;
-}
+    .hero h1 span {
+        color: #ffd700;
+    }
 
 .cta-button {
     display: inline-block;
@@ -82,10 +98,10 @@ header {
     transition: 0.3s ease;
 }
 
-.cta-button:hover {
-    background: #ffd700;
-    color: white;
-}
+    .cta-button:hover {
+        background: #ffd700;
+        color: white;
+    }
 
 /* About Section */
 #about {
@@ -105,12 +121,26 @@ header {
 .project-card {
     background: white;
     border: 1px solid #ddd;
-    border-radius: 10px;
     padding: 15px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: 0.3s ease;
+    border-radius: 10px;
 }
+
+.image-wrapper {
+    width: 100%; /* Ensure it takes the full width of the parent */
+    height: 250px; /* Fixed height to match the image size */
+    overflow: hidden; /* Hide any overflow to ensure the image fits within rounded corners */
+    border-radius: 10px; /* Round the corners of the wrapper */
+}
+
+    .image-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ensures the image covers the wrapper without distortion */
+        display: block; /* Remove any space below the image */
+    }
 
 .project-card:hover {
     transform: translateY(-5px);
@@ -130,10 +160,7 @@ footer {
     text-align: center;
 }
 
-.project-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures the image is cropped proportionally to fit */
-    border-radius: 5px;
-    margin-bottom: 10px;
+.navbar .logo img {
+    height: 70px; /* Smaller height for the logo */
+    width: auto; /* Maintain the aspect ratio */
 }
