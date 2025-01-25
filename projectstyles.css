@@ -1,5 +1,4 @@
 /* Ensure no margin or padding for html and body to avoid off-center alignment */
-
 * {
     margin: 0;
     padding: 0;
@@ -13,20 +12,19 @@ body {
     background: linear-gradient(to bottom, #1D2B45, #20172C); /* Gradient background */
 }
 
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
+.page-name {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
 }
 
-
-/* Make sure the navbar stays centered and fixed */
 /* Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 50px; /* Adjusted padding */
+    padding: 0px 20px; /* Adjusted padding */
     position: fixed;
     top: 0;
     left: 0;
@@ -46,30 +44,33 @@ header {
     z-index: 1;
 }
 
-    /* Logo inside navbar */
-    .navbar .logo img {
-        height: 70px; /* Adjust the logo size */
-        width: auto;
-    }
+/* Logo inside navbar */
+.navbar .logo img {
+    height: 70px; /* Adjust the logo size */
+    width: auto;
+}
 
 /* Navbar links */
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 15px;
 }
 
     .nav-links a {
-        color: white;
+        color: #FFD700; /* Gold color for the text */
         text-decoration: none;
         font-weight: bold;
     }
 
+    .nav-links li {
+        display: inline;
+    }
 
 /* Ensure the container is centered properly */
 .container {
     width: 90%;
-    max-width: 1200px;
+    max-width: 1450px;
     margin: 0 auto; /* This ensures content is centered */
 }
 
@@ -83,24 +84,26 @@ header {
 
 /* Featured Projects Section */
 #featured-projects {
+    margin: 0 auto;
     padding: 50px 0;
     background: #2D3A56; /* Darker background for contrast */
     text-align: center;
 }
 
     #featured-projects h2 {
-        color: #FFD700;
+        color: #FFD700; /* Gold color */
         margin-bottom: 30px;
     }
 
 .project-card.featured {
-    background: #3A4D6A;
+    background: #3A4D6A; /* Darker blue background */
     border-radius: 10px;
     padding: 20px;
     text-align: center;
-    color: white;
+    color: #e0e0e0; /* Light gray text for better contrast */
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 0 auto;
 }
 
     .project-card.featured:hover {
@@ -117,25 +120,25 @@ header {
 
     .project-card.featured h3 {
         font-size: 1.8rem;
-        color: #FFD700;
+        color: #FFD700; /* Gold color */
         margin-bottom: 10px;
     }
 
     .project-card.featured p {
         font-size: 1.1rem;
         margin-bottom: 20px;
+        color: #CCCCCC; /* Lighter gray for paragraphs */
     }
-
 
 /* Ensure that all sections, including projects, align correctly */
 #projects {
-    padding: 50px 0;
+    padding: 0 0;
     background: transparent;
 }
 
     #projects h2 {
         font-size: 2.5rem;
-        color: #FFD700;
+        color: #FFD700; /* Gold color */
         margin-bottom: 30px;
         text-align: center;
     }
@@ -148,42 +151,46 @@ header {
     margin-top: 30px;
 }
 
-.project-card {
-    background: #fff; /* White background for cards */
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
-    color: #333;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.project-category {
+    margin-bottom: 50px;
+    color: #CCCCCC
 }
 
-    .project-card img {
+.image-wrapper {
+    min-width: 60px;
+    width: 100%; /* Ensure it takes the full width of the parent */
+    height: 150px; /* Adjust height as needed */
+    overflow: hidden; /* Hide any overflow to ensure the image fits within rounded corners */
+    border-radius: 10px; /* Round the corners of the wrapper */
+    margin: 0 auto;
+}
+
+    .image-wrapper img {
         width: 100%;
-        height: auto;
-        border-radius: 10px;
-        margin-bottom: 15px;
+        height: 100%;
+        object-fit: cover; /* Ensures the image covers the wrapper without distortion */
+        display: block; /* Remove any space below the image */
+        margin: 0 auto;
     }
 
-    .project-card h3 {
-        font-size: 1.6rem;
-        margin-bottom: 15px;
-        color: #1D2B45;
-    }
+.project-card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    color: #FFD700; /* Gold color for headings */
+}
 
-    .project-card p {
-        font-size: 1rem;
-        margin-bottom: 20px;
-    }
+.project-card p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
 
-    .project-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    }
+.project-card:hover {
+    transform: translateY(-5px);
+}
 
 /* Project link styling */
 .project-link {
-    color: #FFD700;
+    color: #FFD700; /* Gold color */
     text-decoration: none;
     font-weight: bold;
     display: inline-block;
@@ -196,13 +203,30 @@ header {
 
     .project-link:hover {
         background-color: #FFD700;
-        color: #1D2B45;
+        color: #1D2B45; /* Dark blue text on hover */
     }
+
+    .project-link.featured {
+        color: #FFD700; /* Gold color */
+        text-decoration: none;
+        font-weight: bold;
+        display: inline-block;
+        padding: 10px 20px;
+        border-radius: 5px;
+        background-color: transparent;
+        border: 2px solid #FFD700;
+        transition: background-color 0.3s ease;
+    }
+
+        .project-link.featured:hover {
+            background-color: #FFD700;
+            color: #1D2B45; /* Dark blue text on hover */
+        }
 
 /* Footer Styling */
 footer {
     background: #333;
-    color: white;
+    color: #e0e0e0; /* Light gray text */
     padding: 20px 0;
     text-align: center;
 }
@@ -214,10 +238,118 @@ footer {
 
     /* Adjustments for links in footer */
     footer a {
-        color: #FFD700;
+        color: #FFD700; /* Gold color */
         text-decoration: none;
     }
 
         footer a:hover {
             text-decoration: underline;
         }
+
+.project-carousel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: auto;
+    max-width: calc(3 * 500px + 6 * 20px);
+    margin: 0 auto;
+}
+
+.project-wrapper {
+    display: flex;
+    overflow-x: auto;
+    justify-content: flex-start;
+    cursor: grab;
+    cursor: -webkit-grab;
+    transition: scroll 0.5s ease-in-out;
+    width: auto;
+    padding: 0 0;
+}
+
+    .project-wrapper::-webkit-scrollbar {
+        display: none;
+    }
+    .project-wrapper.active {
+        cursor: grabbing;
+        cursor: -webkit-grabbing;
+    }
+
+.project-card {
+    min-width: 50px;
+    max-width: 500px;
+    margin: 0 10px;
+    background: #2D3A56;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    color: #e0e0e0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+}
+
+/* Modal */
+.modal {
+    display: none; /* Ensure the modal is hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #2D3A56; /* Match the carousel card color */
+    padding: 20px; /* Increase padding for more space */
+    max-height: 70vh;
+    max-width: 90vh;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Remove the light grey outline */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+    .modal-image img {
+        height: auto; 
+        width: 90%; /* Maintain aspect ratio */
+        border-radius: 10px;
+    }
+
+.modal-description {
+    margin-top: 20px;
+    width: 100%; /* Use the full width of the modal */
+    max-height: calc(60vh - 40px); /* Ensure description fits within the modal */
+    overflow-y: hidden;
+}
+
+    .modal-description h2 {
+        color: #FFD700; /* Gold color */
+        font-family: "rival-sans", sans-serif;
+        font-weight: 900;
+        font-style: italic;
+    }
+
+    .modal-description p {
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+        color: #CCCCCC; /* Lighter gray for paragraphs */
+    }
